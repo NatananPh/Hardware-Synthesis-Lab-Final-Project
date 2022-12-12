@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Dec  9 14:37:19 2022
+# Process ID: 34052
+# Current directory: C:/Users/ASUS/Desktop/labProject/HwSynLabFinal
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent35584 C:\Users\ASUS\Desktop\labProject\HwSynLabFinal\FinalProject.xpr
+# Log file: C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/vivado.log
+# Journal file: C:/Users/ASUS/Desktop/labProject/HwSynLabFinal\vivado.jou
+# Running On: LAPTOP-6L5H58HU, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16542 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.xpr
+open_hw_manager

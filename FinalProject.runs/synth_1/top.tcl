@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/ASUS/Desktop/temp/HW-Syn-Lab/FinalProject/FinalProject.runs/synth_1/top.tcl"
+  variable script "C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
+set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
@@ -78,33 +78,31 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/ASUS/Desktop/temp/HW-Syn-Lab/FinalProject/FinalProject.cache/wt [current_project]
-set_property parent.project_path C:/Users/ASUS/Desktop/temp/HW-Syn-Lab/FinalProject/FinalProject.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.cache/wt [current_project]
+set_property parent.project_path C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {C:/Users/ASUS/AppData/Roaming/Xilinx/Vivado/2022.1/xhub/board_store/xilinx_board_store} [current_project]
-set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
-set_property ip_output_repo c:/Users/ASUS/Desktop/temp/HW-Syn-Lab/FinalProject/FinalProject.cache/ip [current_project]
+set_property ip_output_repo c:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/ALU.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/baudrate_gen.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/binary2DIG.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/clockDiv.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/clockGenerator.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/digits_rom.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/hexTo7Segment.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/inputControl.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/numberCounter.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/quadSevenSeg.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/singlePulser.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/uart.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/uart_rx.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/vga_control.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/imports/sources_1/vga_sync.v
-  C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/sources_1/new/top.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/ALU.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/baudrate_gen.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/binary2DIG.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/clockDiv.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/clockGenerator.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/digits_rom.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/hexTo7Segment.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/inputControl.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/numberCounter.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/quadSevenSeg.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/singlePulser.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/uart.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/uart_rx.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/vga_control.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/imports/sources_1/vga_sync.v
+  C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/sources_1/new/top.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -115,12 +113,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/constrs_1/new/Basys-3-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/ASUS/Desktop/labProject/HwSynLabFinal/FinalProject.srcs/constrs_1/new/Basys-3-Master.xdc]
+read_xdc C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/constrs_1/new/Basys-3-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/constrs_1/new/Basys-3-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/ASUS/Desktop/temp/HW-Syn-Lab/FinalProject/FinalProject.srcs/utils_1/imports/synth_1/top.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/6/workspace/vivado/HwSynLabFinal/FinalProject.srcs/utils_1/imports/synth_1/vga_control.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
