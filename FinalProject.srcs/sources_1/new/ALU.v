@@ -1,49 +1,28 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 12/06/2022 10:13:40 PM
-// Design Name: 
-// Module Name: ALU
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module ALU(
            input [15:0] A,B,  // ALU 16-bit Inputs                 
-           input [1:0] ALU_Sel,// ALU Selection
+           input [1:0] oper,// math operation on ALU
            input clk,
-           output [15:0] ALU_Out, // ALU 16-bit Output
+           output [15:0] S, // ALU 16-bit Output
            output div0
     );
     
-    reg [15:0] ALU_Result=0;
-    assign ALU_Out = ALU_Result; // ALU out
-    assign div0=(B==0&&ALU_Sel==2'b11);
+    assign div0 = (B==0 && oper==2'b11);
+    reg [15:0] res = 0;
+    assign S = res; // ALU out
     
-    always @(posedge clk)
-    begin
-        case(ALU_Sel)
-        2'b00: // Addition
-           ALU_Result <= A + B ; 
-        2'b01: // Subtraction
-           ALU_Result <= A - B ;
-        2'b10: // Multiplication
-           ALU_Result <= A * B;
-        2'b11: // Division
-           ALU_Result <= A/B;
-          default: ALU_Result = 16'sd9999 ; 
+    always @(posedge clk) begin
+        case(oper)
+         2'b00: // Addition
+            res <= A + B ; 
+         2'b01: // Subtraction
+            res <= A - B ;
+         2'b10: // Multiplication
+            res <= A * B;
+         2'b11: // Division
+            res <= A / B;
+            default: res = 16'sd0000 ; 
         endcase
     end
 

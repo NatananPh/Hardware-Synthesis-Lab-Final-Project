@@ -19,7 +19,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module top(
     output [6:0] seg,
     output dp,
@@ -49,7 +48,7 @@ module top(
     // Clock
     wire targetClk;
     
-    clockGenerator(clk,targetClk);
+    gen_clock(clk,targetClk);
     
     ////////////////////////////////////////
     // Display

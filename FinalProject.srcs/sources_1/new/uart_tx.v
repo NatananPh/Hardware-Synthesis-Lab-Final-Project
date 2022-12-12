@@ -1,23 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 10/31/2021 10:15:58 PM
-// Design Name: 
-// Module Name: uart_tx
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 module uart_tx(
     input clk,
@@ -45,7 +26,7 @@ module uart_tx(
         if (sending)    count <= count + 1;
         else            begin count <= 0; bit_out <= 1; end
         
-        // sampling every 16 ticks
+        // sampling every 16 clock cycles
         case (count)
             8'd8: bit_out <= 0;
             8'd24: bit_out <= temp[0];  

@@ -41,6 +41,6 @@ module singlePulser(
             2'b11: ;
         endcase
     end
-    
+
     
 endmodule
